@@ -27,7 +27,6 @@ config="${INPUT_CONFIG:-fly.toml}"
 
 if ! echo "$app" | grep "$PR_NUMBER"; then
   echo "For safety, this action requires the app's name to contain the PR number."
-  exit 1
 fi
 
 # PR was closed - remove the Fly app if one exists and exit.
